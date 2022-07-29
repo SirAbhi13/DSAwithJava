@@ -7,16 +7,14 @@ class Solution {
         }
         while(l<=r){
             int mid = (r-l)/2 + l;
-            if(letters[mid] == target){
+            if(letters[mid] == target || target>letters[mid]){
                 l = mid+1;
                 
             }
             else if (target<letters[mid]){
                 r = mid-1;
             }
-            else{
-                l = mid+1;
-            }      
+                 
         }
         if(l<0){
             return letters[0];
